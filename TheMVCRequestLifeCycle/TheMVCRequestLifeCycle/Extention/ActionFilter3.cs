@@ -3,16 +3,16 @@ using System.Web.Mvc;
 
 namespace TheMVCRequestLifeCycle.Extention
 {
-    public class ActionFilter1 : FilterAttribute, IActionFilter
+    public class ActionFilter3 : FilterAttribute, IActionFilter
     {
         public void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            HttpContext.Current.Application["Order"] += "Action 1 <br/>";
+            HttpContext.Current.Application["Order"] += "Action 3 <br/>";
         }
 
         public void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            HttpContext.Current.Application["Order"] += "Action 1 <br/>";
+            HttpContext.Current.Application["Order"] += "Action 3 <br/>";
         }
     }
 }

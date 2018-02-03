@@ -160,6 +160,9 @@
     <Compile Include="Controllers\CustomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extention\ActionFilter1.cs" />
+    <Compile Include="Extention\ActionFilter2.cs" />
+    <Compile Include="Extention\ActionFilter3.cs" />
+    <Compile Include="Extention\AuthorizationFilter.cs" />
     <Compile Include="Filters\IsMobile.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
