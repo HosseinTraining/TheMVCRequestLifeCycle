@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.SessionState;
 using TheMVCRequestLifeCycle.Controllers;
@@ -13,9 +9,9 @@ namespace TheMVCRequestLifeCycle.Models
     {
         public IController CreateController(RequestContext requestContext, string controllerName)
         {
-            if (controllerName == "Custome")
+            if (controllerName == "Custom")
             {
-                return new CustomeController(new Logger());
+                return new CustomController(new Logger());
             }
             else
             {

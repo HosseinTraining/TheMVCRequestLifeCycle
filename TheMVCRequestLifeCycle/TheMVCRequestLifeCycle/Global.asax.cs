@@ -8,6 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
+using TheMVCRequestLifeCycle.Extention;
 using TheMVCRequestLifeCycle.Models;
 
 namespace TheMVCRequestLifeCycle
@@ -27,14 +28,15 @@ namespace TheMVCRequestLifeCycle
 
 
             ControllerBuilder.Current.SetControllerFactory(new DefaultControllerFactory());
-
+           
 
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
+            // ViewEngines.Engines.Add(new CostomViewEngin());
+            ViewEngines.Engines.Insert(0,new CostomViewEngin());
 
         }
     }
